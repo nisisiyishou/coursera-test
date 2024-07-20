@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+#chicken, #beef, #sushi {
+    box-sizing: border-box;
+    /* width: calc(33.33% - 2*1% - 2*3px); */
+    padding: 10px;
+    margin: 1%; /* vertical margin */
+    background-color: grey;
+    border: 3px solid black;
+    position: relative; /* relative to the parent */
+}
+
+#chicken span, #beef span, #sushi span {
+    border: 3px solid black; /* 3px border lines */
+    padding: 2px; /* 2px away from the border */
+    position: absolute; /* absolute to the parent */
+    top: 0;
+    right: 0;
+}
+
+#chicken span {
+    background-color: pink;
+}
+
+#beef span {
+    background-color: red;
+    color: white;
+}
+
+#sushi span {
+    background-color: yellow;
+    
+}
+
+@media (min-width: 992px) {
+    .col-lg-4
+    {
+        float: left;
+        width: calc(33.33% - 2*1% - 2*3px); /* subtract margins on both left and right sides, and borders of two adjacent rectangles */
+        margin: 1%; /*horizontal margin*/
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6
+    {
+        float: left;
+        width: calc(50% - 2*1% - 2*3px);
+        margin: 1%; /* horizontal margin */
+    }
+}
